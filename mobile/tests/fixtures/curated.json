@@ -1,0 +1,81 @@
+{
+  "skin_analysis": {
+    "detected_tone": "Medium",
+    "undertone": "Warm",
+    "finish": "Dewy"
+  },
+  "face": {
+    "foundation": "light satin coverage",
+    "concealer": "nude beige under eyes",
+    "blush": "peach pink",
+    "blush_hex": "#E5827D",
+    "highlight": "soft gold",
+    "contour": "skip",
+    "primer": "hydrating primer",
+    "setting": "satin setting spray",
+    "tip": "keep it elegant and fresh for Eid visits"
+  },
+  "eyes": {
+    "eyeshadow": "copper brown on lid, nude on brow bone",
+    "eyeshadow_hex": "#A46643",
+    "eyeliner": "black kajal in waterline + thin black liner",
+    "eyeliner_hex": "#1C1C1C",
+    "mascara": "lengthening black mascara",
+    "brows": "soft natural arch",
+    "tip": "keep eyes elegant and simple"
+  },
+  "lips": {
+    "liner": "nude pink liner",
+    "lipstick": "soft rose satin",
+    "shade_name": "Petal Rose",
+    "hex": "#C95B72",
+    "gloss": "clear gloss for shine",
+    "tip": "keep lips soft and elegant"
+  },
+  "outfit": {
+    "dressing": "pastel or bright embroidered shalwar kameez or sharara",
+    "dupatta": "matching chiffon or silk dupatta",
+    "footwear": "nude or gold heels or embroidered khussa",
+    "style_note": "fresh pastels or vibrant colours work beautifully for Eid"
+  },
+  "accessories": {
+    "jewellery": "simple gold earrings and thin bangles",
+    "bag": "small matching clutch",
+    "extra": "delicate bracelet or watch"
+  },
+  "brands": {
+    "foundation_brand": "Huda Beauty FauxFilter (full coverage) or Maybelline Fit Me (light-medium)",
+    "lip_brand": "Charlotte Tilbury Pillow Talk or L'Oreal Color Riche",
+    "eye_brand": "Maybelline Sky High mascara + Essence eyeliner",
+    "blush_brand": "NARS Orgasm blush or e.l.f. Monochromatic Multi-Stick",
+    "drugstore_pick": "L'Oreal Infallible 24H (budget-friendly option)",
+    "tip": "Choose products suited to your skin type for the best finish."
+  },
+  "lens": {
+    "color": "warm honey or light brown",
+    "brand_suggestion": "FreshLook Illuminate or Solotica Hidrocor",
+    "reason": "warm honey or light brown lenses complement medium skin beautifully",
+    "tip": "always use lens-safe drops and never sleep in lenses"
+  },
+  "hair_hijab": {
+    "style": "simple chiffon hijab neatly draped with minimal pins",
+    "color_suggestion": "match hijab colour to outfit or complement with a neutral tone",
+    "accessory": "pearl hijab pins or a brooch for formal occasions",
+    "tip": "a silk undercap prevents slipping and keeps your hijab in place all day"
+  },
+  "weather_tip": "Consider the weather when doing your makeup — waterproof products are great for humid or rainy days.",
+  "overall_tip": "A glamorous look perfect for eid — confidence is your best accessory! ✨",
+  "status": "fallback",
+  "inputs_received": {
+    "skin_tone": "medium",
+    "undertone": "not provided",
+    "skin_type": "not provided",
+    "event": "eid",
+    "time_of_day": "day",
+    "outfit_color": "#D4A0C0",
+    "hijab": "yes",
+    "style": "both",
+    "image": "not provided",
+    "weather": "not provided"
+  }
+}

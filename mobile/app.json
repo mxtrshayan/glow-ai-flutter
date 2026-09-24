@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "GlowAI",
+    "slug": "glow-ai",
+    "scheme": "glowai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "android": {
+      "package": "com.glowai.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundColor": "#F9EEF2"
+      },
+      "blockedPermissions": ["android.permission.RECORD_AUDIO"]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Take a portrait for your GlowAI look.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Use local weather to personalise your look."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "savePhotosPermission": "Save your finished GlowAI photo.",
+          "granularPermissions": ["photo"]
+        }
+      ],
+      "expo-font",
+      "expo-sharing",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 180,
+          "backgroundColor": "#FDF6F9"
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+export const theme = {
+  colors: {
+    bg: "#FDF6F9",
+    surface: "#FFFFFF",
+    ink: "#2D1B26",
+    muted: "#735561",
+    rose: "#E8A0B4",
+    primary: "#9D3F60",
+    soft: "#F9EEF2",
+    border: "#EDD5E0",
+    gold: "#C9A96E",
+    plum: "#462535",
+    success: "#326B57",
+    error: "#A32C44",
+  },
+  gradients: {
+    hero: ["#F4DCE5", "#FDF6F9", "#F4E6D5"] as const,
+    button: ["#A74A6A", "#7D2E4D"] as const,
+  },
+  fonts: {
+    title: "PlayfairDisplay_600SemiBold",
+    italic: "PlayfairDisplay_400Regular_Italic",
+    body: "Poppins_400Regular",
+    medium: "Poppins_500Medium",
+    bold: "Poppins_600SemiBold",
+  },
+  space: { xs: 6, sm: 12, md: 20, lg: 28, xl: 40 },
+  radius: { sm: 14, card: 26, pill: 100 },
+  shadow: {
+    shadowColor: "#6B2742",
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.07,
+    shadowRadius: 18,
+    elevation: 2,
+  },
+  motion: { quick: 160, entrance: 320 },
+};
