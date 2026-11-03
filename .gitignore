@@ -44,3 +44,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Local native IDE state
+**/xcuserdata/
+
+# Generated review artifacts (keep runtime dashboard assets in assets/dashboard)
+docs/portrait-review/
+docs/*.png
+docs/*.jpg

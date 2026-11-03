@@ -6,7 +6,30 @@ class FallbackRecommendationService {
   const FallbackRecommendationService();
 
   Recommendation create(Profile profile) {
-    final recipe = fallbackRecipes[profile.event] ?? fallbackDefault;
+    final family = switch (profile.event) {
+      'dholki' => 'mehndi',
+      'valima' => 'wedding',
+      'date' || 'photoshoot' || 'festival' => 'party',
+      _ => profile.event,
+    };
+    final recipe = fallbackRecipes[family] ?? fallbackDefault;
+    final occasion =
+        const {
+          'wedding': 'wedding celebrations',
+          'mehndi': 'mehndi celebration',
+          'dholki': 'dholki celebration',
+          'eid': 'Eid celebration',
+          'valima': 'valima reception',
+          'everyday': 'everyday',
+          'university': 'university day',
+          'office': 'office day',
+          'shopping': 'shopping day',
+          'party': 'party',
+          'date': 'date',
+          'photoshoot': 'photoshoot',
+          'festival': 'festival',
+        }[profile.event] ??
+        recipe.label;
     final seed = _seed(profile);
     String choose(List<String> values, int offset) =>
         values[(seed + offset) % values.length];
@@ -28,7 +51,7 @@ class FallbackRecommendationService {
     final sections = <String, Map<String, String>>{
       'skin_analysis': {
         'skin tone': profile.skinTone.isEmpty
-            ? 'Your portrait can refine this further.'
+            ? 'Not specified; choose a skin tone for closer shade suggestions.'
             : profile.skinTone,
         'undertone': profile.undertone.isEmpty
             ? 'neutral-friendly shades'
@@ -94,21 +117,18 @@ class FallbackRecommendationService {
     };
     return Recommendation(
       sections,
-      'Your ${recipe.label} look is designed to feel $style. This edit combines ${name(lip)}, ${name(blush)} and ${name(eye)} for a considered, wearable result.',
+      'Your $occasion look is designed to feel $style. This edit combines ${name(lip)}, ${name(blush)} and ${name(eye)} for a considered, wearable result.',
     );
   }
 
-  int _seed(Profile p) => Object.hash(
-    p.skinTone,
-    p.undertone,
-    p.skinType,
-    p.event,
-    p.time,
-    p.outfit,
-    p.hijab,
-    p.style,
-    p.owned,
-  ).abs();
+  int _seed(Profile p) {
+    // Object.hash uses a random seed per process; keep saved choices repeatable.
+    var hash = 0;
+    for (final unit in p.toJson().values.join('|').codeUnits) {
+      hash = (hash * 31 + unit) & 0x7fffffff;
+    }
+    return hash;
+  }
 
   String _lens(String tone) {
     if (tone.contains('deep') || tone.contains('rich')) {
